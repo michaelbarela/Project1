@@ -1,0 +1,61 @@
+.btn {
+    margin: 1em;
+}
+
+body {
+    background-color: darkslategrey;
+}
+
+#header {
+    margin-top: 2em;
+}
+
+#placeForUserInput {
+    border: solid;
+    border-color: aliceblue;
+    
+}
+
+.custom-select {
+    width: 200px;
+    height: 30px;
+}
+
+.control-label {
+    color: white;
+}
+
+.btn {
+    color: white;
+    width: 150px;
+}
+
+.form-horizontal {
+    margin-left: 10em;
+}
+
+option {
+    font-size: 1em;
+}
+
+.footer {
+    background-color: black;
+    margin-bottom: 0;
+}
+
+.col-sm-3 {
+    color: white;
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.col-sm-3 a {
+    color: white;
+    padding: 0.3em 0.3em 0.3em 0.3em;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+}
