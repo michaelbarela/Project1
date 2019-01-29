@@ -59,3 +59,27 @@ option {
     text-align: center;
     text-decoration: none;
 }
+
+@media (min-width: 960px){
+    img {
+        width: 80%;
+        height: 290px;
+        text-align: center;
+    }
+    
+    .col-md-3 .well {
+        height:450px;
+    }
+}
+
+
+
+
+h5 {
+    color: white;
+    padding: 10px;
+}
+
+label {
+    color: white;
+}

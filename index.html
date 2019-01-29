@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body>
@@ -18,6 +18,7 @@
                     <a href="#" class="navbar-brand text-white">Movie Picker</a>
                     <form class="form-inline">
                       <input id="searchForm" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button id="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button><br>
                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button><br>
                       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
                     </form>
@@ -32,63 +33,50 @@
                 </div>
 
                 <!-------------------USER INPUTS AND MOVIE BANNER GO HERE------------------>
-                <div id="mainBanner" class="container">
-                <form class="form-horizontal" action="/action_page.php">
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="email">Genre:</label>
-                      <div class="col-sm-10">
-                            <select class="custom-select" id="inputGroupSelect01">
-                                    <option selected>All Genres</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-sm-2" for="pwd">Type:</label>
-                      <div class="col-sm-10"> 
-                            <select class="custom-select" id="inputGroupSelect01">
-                                    <option selected>Choose Type</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                      </div>
-                    </div>
-                   
-                   
-                    <div class="form-group">
-                            <label class="control-label col-sm-2" for="email">IMDB:</label>
-                            <div class="col-sm-10">
-                                    <select class="custom-select" id="inputGroupSelect01">
-                                            <option selected>Any Score</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <label class="control-label col-sm-2" for="pwd">Rotten Tomatoes:</label>
-                            <div class="col-sm-10"> 
-                                    <select class="custom-select" id="inputGroupSelect01">
-                                            <option selected>Any Score</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                          </select>
-                            </div>
-                          </div>
+                <div class="container">
+                <label for="basic-url">Tytle</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                     
+                    <input type="text" class="form-control" id="tytleInput" aria-describedby="basic-addon3">
+                  </div>
+                </div>
+
+                  <label for="basic-url">Year</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      
+                    <input type="text" class="form-control" id="yearInput" aria-describedby="basic-addon3">
+                  </div>
+                </div>
+
+                  <label for="basic-url">Type ( Movie / TV Show )</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      
+                    <input type="text" class="form-control" id="typeInput" aria-describedby="basic-addon3">
+                  </div>
+                </div>
+
+                
                           
                           <div class="form-group"> 
                             <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="button" class="btn btn-secondary">Spin</button>
+                                    <button type="button" id="spin" class="btn btn-secondary">Spin</button>
                             </div>
                           </div>
-                  </form>
+                        </div>
+                  
                  
-                   </div>
+                   
+
+                    <!---------------------DIV FOR RANDOM MOVIE PLACE------------->
+
+                   <div class="container">
+                    <div id="randomMoviePlace" class="row">
+
+                    </div>
+                  </div>
 
                    <!---------------------DIV FOR MOVIE AFTER USER DO SEARCH IN SEARCH FIELD------------->
                    
@@ -135,4 +123,3 @@
   </body>
 
 </html>
-
