@@ -8,8 +8,8 @@
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
     </head>
     <body>
         <!----------------------------NAV BAR GOES HERE---------------------->
@@ -18,22 +18,44 @@
                     <a href="#" class="navbar-brand text-white">Movie Picker</a>
                     <form class="form-inline">
                       <input id="searchForm" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                      <button id="submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button><br>
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button><br>
-                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+                      <button id="submitSearch" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button><br>
+                      <button id="logIn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Log In</button><br>
+                      <button id="signUp" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
                     </form>
                   </nav>
+
+                  <!----------------------------SIGN UP FORM HERE---------------------->
+                  <div id="signUpForm">
+                      <form class="box" action="index.html" method="POST">
+                          <h1>SIGN-UP TODAY!</h1>
+                          <input type="text" id="userName"name="" placeholder="CREATE A USERNAME">
+                          <input type="password" id="passWord" name="" placeholder="CREATE A PASSWORD">
+                          <input type="submit" id="submit" name="" placeholder="SIGN UP">
+                      </form>
+                  </div>
+
+                  <!----------------------------LOG IN FORM HERE---------------------->
+                  <div id="logInForm">
+                      <form class="box" action="login.html" method="POST">
+                          <h1>Login</h1>
+                          <input type="text" id='userName' name="" placeholder="USERNAME">
+                          <input type="password" id='passWord' name="" placeholder="PASSWORD">
+                          <input type="submit" onclick="login()" id='submit' name="" placeholder="Login">
+                      </form>
+                  </div>
+
+
                   
                   
                   <!-----------------------------DIV FOR HEADER GOES HERE---------------------->
                   <div id="header"  class="container">
 
                   <h3 class="text-white">Movie Picker: What Should I watch?</h3>
-                  <p class="text-white">If you're wondering what movie or TV show you should watch next, use the Netflix randomizer below.</p>
+                  <p class="text-white">If you're wondering what movie or TV show you should watch next, use Movie Picker randomizer below.</p>
                 </div>
 
-                <!-------------------USER INPUTS AND MOVIE BANNER GO HERE------------------>
-                <div class="container">
+                <!-------------------USER INPUTS FOR RANDOM SEARCH AND MOVIE BANNER GO HERE------------------>
+                <div id="randomizer" class="container">
                 <label for="basic-url">Tytle</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -88,7 +110,7 @@
                   
                   <!--------------------------------------FOOTER GOES HERE----------------------------->
                   
-                  <div class="footer">
+                  <!-----<div class="footer">
                      
                       <div class="row">
                           <div class="col-sm-3"><a href="#">Popular Movies</a></div>
@@ -114,10 +136,11 @@
                                     <div class="col-sm-3"><a href="https://twitter.com/">Twitter</a></div>
                                     <div class="col-sm-3"></div>
                                 </div>
-                  </div>
+                  </div>--->
 
-                  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                  <!-----<script src="https://unpkg.com/axios/dist/axios.min.js"></script>--->
                   <script src="app.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
     
     
   </body>

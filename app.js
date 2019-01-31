@@ -1,7 +1,9 @@
 //binding 
 $(document).ready(function(){
+    $("#signUpForm").hide();
+    $("#logInForm").hide();
     ///////////////------BELOW IS CODE FOR SEARCH FIELD----////////////
-    $("#submit").on("click", (e) => {
+    $("#submitSearch").on("click", (e) => {
         getMovies();
         e.preventDefault();  //function that prevents submitting empty search form
 
@@ -146,6 +148,85 @@ function getRandomMovie(){
     
     
 } //end of getRandomMovie here
+
+
+///////////////----------CODE FOR SIGN UP AND LOG IN------------//////////////
+
+$("#signUp").click(function(){
+    $("#header").hide();
+    $("#randomizer").hide();
+    $("#randomMoviePlace").hide();
+    $("#moviePlace").hide();
+    $("#logInForm").hide();
+    $("#signUpForm").show();
+    return false;
+
+})
+
+
+$("#logIn").click(function(){
+    $("#header").hide();
+    $("#randomizer").hide();
+    $("#randomMoviePlace").hide();
+    $("#moviePlace").hide();
+    $("#signUpForm").hide();
+    $("#logInForm").show();
+    return false;
+
+})
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyAASgXXwagI49Z4C80hpOCOWS5hVBSrOec",
+    authDomain: "project-uno-335d4.firebaseapp.com",
+    databaseURL: "https://project-uno-335d4.firebaseio.com",
+    projectId: "project-uno-335d4",
+    storageBucket: "project-uno-335d4.appspot.com",
+    messagingSenderId: "735977328762"
+  };
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+  // Initial Values
+  var userName='';
+  var userPass='';
+  
+  
+  function login(){
+    var userName = document.getElementById("userName").value;
+    var userPass = document.getElementById("passWord").value;
+  
+    $("#submit").on("click", function(event) {
+    event.preventDefault();
+    // Get the input values
+    var userName = $("#userName").val().trim();
+    var userPass = parseInt($("#passWord").val().trim());
+  
+    // Log the Bidder and Price (Even if not the highest)
+    console.log(userName);
+    console.log(userPass);
+  
+    
+      database.ref().set({
+        userName: userName,
+        userPass: userPass
+      });
+    });
+  };
+  
+  database.ref().on("value", function(snapshot) {
+  
+  // Log everything that's coming out of snapshot
+  console.log(snapshot.val());
+  console.log(snapshot.val().userName);
+  console.log(snapshot.val().userPass);
+  
+  
+  // Change the HTML to reflect
+  $("#userName").text(snapshot.val().userName);
+  $("#passWord").text(snapshot.val().userPass);
+  }); //end of function snapshot
+  
 
     
     

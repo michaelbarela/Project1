@@ -39,8 +39,13 @@ option {
 }
 
 .footer {
+   
     background-color: black;
     margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
 }
 
 .col-sm-3 {
@@ -83,3 +88,95 @@ h5 {
 label {
     color: white;
 }
+
+
+/*-----------STYLE FOR SIGN UP FDORM HERE---------*/
+.box{
+   
+    width: 300px;
+    padding-top: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #343a40;
+    text-align: center;
+    color:white;
+    font-size: 1em;
+}
+
+.box h1{
+    color:white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.box input[type = "text"], .box input[type = "password"]{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:2px solid #3498db;
+    padding: 14px 10px;
+    color:white;
+    width: 200px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus, .box input[type = "password"]:focus {
+width:280px;
+border-color:#2ecc71;
+}
+
+
+.box input[type = "submit"]{
+    border:0;
+    background:none;
+    display:block;
+    margin:20px auto;
+    text-align:center;
+    border:2px solid #2ecc71;
+    padding: 14px 40px;
+    color:white;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type = "submit"]:hover{
+    background: #2ecc71;
+}
+
+
+#logIn, #signUp, #submitSearch {
+    border:0;
+    background:none;
+    display:block;
+   
+    margin: 10px;
+    text-align:center;
+    border:2px solid #2ecc71;
+    padding: 14px 40px;
+    color:white;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+nav a {
+    padding-left: 3em;
+}
+
+#randomizer {
+    padding-left: 10em;
+}
+
+#header {
+    padding-left: 10em;
+}
+
